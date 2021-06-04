@@ -14,33 +14,33 @@ const cards = [
   },
   {
     _id: "2",
-    name: "33 слова о дизайне",
+    name: "Киноальманах «100 лет дизайна»",
     duration: 107,
     image: pic2,
 
   },
   {
     _id: "3",
-    name: "33 слова о дизайне",
+    name: "В погоне за Бенкси",
     duration: 107,
     image: pic3,
   },
   {
     _id: "4",
-    name: "33 слова о дизайне",
+    name: "Баския: Взрыв реальности",
     duration: 107,
     image: pic4,
   },
   {
     _id: "5",
-    name: "33 слова о дизайне",
+    name: "Бег это свобода",
     duration: 107,
     image: pic5,
 
   },
   {
     _id: "6",
-    name: "33 слова о дизайне",
+    name: "Книготорговцы",
     duration: 107,
     image: pic6,
   },

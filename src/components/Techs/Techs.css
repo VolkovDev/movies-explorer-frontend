@@ -24,7 +24,7 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, 90px);
-  column-gap: 10px;
+  gap: 10px;
   justify-content: center;
 }
 

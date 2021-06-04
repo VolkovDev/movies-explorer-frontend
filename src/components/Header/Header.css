@@ -1,8 +1,12 @@
 .header {
   display: flex;
   justify-content: center;
-  background-color: #DDDEE3;
+  background-color: #FAFAFA;
   min-height: 74px;
+}
+
+.header_background-color-grey {
+  background-color: #DDDEE3;
 }
 
 .header_hidden {

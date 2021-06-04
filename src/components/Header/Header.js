@@ -3,19 +3,20 @@ import { NavLink } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 
 const Header = ({
-    path, isСheckIn, onLogoClick, onLoginClick, onRegisterClick,
+    pathOne, isСheckIn, onLogoClick, onLoginClick, onRegisterClick,
     handleMenuOpen, handleOnMainClick, handleMoviesClick, handleOnAccountClick
 }) => {
-
+    console.log("pathOne", pathOne)
     return (
-        <header className={`header 
-      ${(path === '/movies' || path === '/saved-movies' || path === '/profile') && 'header_login'}
-      ${(path === '/signin' || path === '/signup') && 'header_hidden'}
+        <header className={`header
+      ${(pathOne === '/movies' || pathOne === '/saved-movies' || pathOne === '/profile') && 'header_login'}
+      ${(pathOne === '/signin' || pathOne === '/signup') && 'header_hidden'}
+      ${(pathOne === '/') && 'header_background-color-grey'}
       `}>
             <div className="header__container">
                 <NavLink to="/" className="header__logo" onClick={onLogoClick} />
                 {
-                    !isСheckIn && path === '/' ?
+                    !isСheckIn && pathOne === '/' ?
                         <nav className="header__options">
                             <NavLink to="/signup" className="header__option header__option_register"
                                 onClick={onRegisterClick}>Регистрация</NavLink>

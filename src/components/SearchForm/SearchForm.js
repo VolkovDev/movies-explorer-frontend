@@ -26,7 +26,6 @@ const SearchForm = () => {
                     <button type="submit" className="search__button" />
                 </div>
                 <div className="search__block-down">
-                    <div className="search__line" />
                     <label className="search__toggle">
                         <input type="checkbox" className="search__checkbox" />
                         <span className="search__slider" />

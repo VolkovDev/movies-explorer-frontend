@@ -78,7 +78,7 @@ function App() {
 
     return (
         <div className="App">
-            <Header path={location.path} isСheckIn={isСheckIn} isOnLanding={isToMain}
+            <Header pathOne={location.pathname} isСheckIn={isСheckIn} isOnLanding={isToMain}
                 onLogoClick={handleLogoClick}
                 onRegisterClick={handleRegisterClick} onLoginClick={handleLoginClick} handleMenuOpen={openMenu}
                 handleOnMainClick={setLanding} handleMoviesClick={outLanding}
@@ -110,7 +110,7 @@ function App() {
                 </Route>
             </Switch>
 
-            <Footer path={location.path} />
+            <Footer path={location.pathname} />
 
             <Menu handleMenuClose={closePopups} isOpen={isMenuOpen} handleOnMainClick={setLanding}
                 handleMoviesClick={outLanding} handleOnAccountClick={outLanding} />
