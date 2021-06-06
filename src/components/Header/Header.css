@@ -1,0 +1,157 @@
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: #FAFAFA;
+  min-height: 74px;
+}
+
+.header_background-color-grey {
+  background-color: #DDDEE3;
+}
+
+.header_hidden {
+  display: none;
+}
+
+.header_login {
+  background-color: #FAFAFA;
+}
+
+.header__logo {
+  background: center/38px 38px url(../../images/logo.svg) transparent no-repeat;
+  min-width: 38px;
+  min-height: 38px;
+  transition: opacity 0.5s linear;
+}
+
+.header__logo:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.header__container {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.header__navigation {
+  display: flex;
+}
+
+.header__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: opacity 0.5s linear;
+}
+
+.header__option:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.header__option_register {
+  margin: 0 30px 0 0;
+  padding: 0;
+  min-height: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.header__option_login {
+  margin: 0;
+  padding: 8px 0;
+  border-radius: 3px;
+  color: #FFFFFF;
+  background-color: #3456F3;
+  min-width: 76px;
+  min-height: 32px;
+  text-align: center;
+  box-sizing: border-box;
+
+}
+
+.header__menu-button {
+  display: none;
+  width: 44px;
+  min-height: 44px;
+  box-shadow: none;
+  border: none;
+  background: center/44px 44px url(../../images/menu.svg) transparent no-repeat;
+  transition: opacity 0.6s linear;
+}
+
+.header__menu-button:focus {
+  outline: none;
+}
+
+.header__menu-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__container {
+    padding: 0 30px;
+  }
+
+  .header__menu-button {
+    display: block;
+  }
+
+  .header__navigation {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header__container {
+    padding: 0 14px;
+  }
+
+  .header__navigation {
+    display: none;
+  }
+
+  .header__menu-button {
+    display: block;
+    background: center/40px 43px url(../../images/menu.svg) transparent no-repeat;
+    min-height: 40px;
+    width: 43px;
+    box-shadow: none;
+    border: none;
+    transition: opacity 0.6s linear;
+  }
+
+  .header__option {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .header__option_to-register {
+    margin: 0 26px 0 0;
+  }
+
+  .header__option_to-login {
+    padding: 5px 0;
+    min-width: 54px;
+    min-height: 26px;
+  }
+
+}

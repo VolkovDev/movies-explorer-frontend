@@ -1,0 +1,149 @@
+.landing {
+  display: flex;
+  justify-content: center;
+  min-height: 524px;
+  background-color: #DDDEE3;
+}
+
+.landing__container {
+  width: 100%;
+  padding: 0 70px;
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+}
+
+.landing__container-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing__title {
+  padding: 0;
+  margin: 75px 0 0 0;
+  max-width: 640px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  color: #000000;
+}
+
+.landing__subtitle {
+  max-width: 310px;
+  margin: 36px 0 0 0;
+  text-align: left;
+  font-weight: 400;
+  opacity: 50%;
+  font-size: 13px;
+  line-height: 15.7px;
+}
+
+.landing_button {
+  width: 129px;
+  height: 36px;
+  opacity: 0.6;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin: 146px 0 25px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  background-color: #DDDEE3;
+  color: #000000;
+}
+
+.landing__landing-logo {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  background: 50% 82px/310px 304px url(../../images/landing-logo.svg) transparent no-repeat;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .landing {
+    min-height: 784px;
+  }
+
+  .landing__container {
+    max-width: 1280px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .landing__container-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .landing__title {
+    margin: 48px 0 0 0;
+    max-width: 640px;
+    text-align: center;
+  }
+
+  .landing__subtitle {
+    text-align: center;
+  }
+
+  .landing_button {
+    margin: 92px 0 55px;
+  }
+
+  .landing__landing-logo {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    box-shadow: none;
+    background: 50% 142px/248px 248px url(../../images/landing-logo.svg) transparent no-repeat;
+  }
+}
+
+@media screen and (min-width: 255px) and (max-width: 767px) {
+  .landing {
+    min-height: 570px;
+  }
+
+  .landing__container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .landing__landing-logo {
+    min-height: 400px;
+    background: 50% 142px/200px 248px url(../../images/landing-logo.svg) transparent no-repeat;
+  }
+
+  .landing__title {
+    margin: 33px 0 0 0;
+    font-size: 31px;
+    text-align: center;
+
+  }
+
+  .landing__container-text {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .landing__subtitle {
+    margin: 22px 0 0 0;
+    text-align: center;
+  }
+
+  .landing_button {
+    margin: 80px 0 30px;
+  }
+}
