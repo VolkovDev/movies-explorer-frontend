@@ -3,8 +3,11 @@ import { NavLink } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 
 const Header = ({
-    pathOne, isСheckIn, onLogoClick, onLoginClick, onRegisterClick,
-    handleMenuOpen, handleOnMainClick, handleMoviesClick, handleOnAccountClick
+    pathOne,
+    isСheckIn,
+    handleMenuOpen,
+    handleByClickButtonSaveMovies,
+    handleClickByMovies
 }) => {
     console.log("pathOne", pathOne)
     return (
@@ -14,18 +17,19 @@ const Header = ({
       ${(pathOne === '/') && 'header_background-color-grey'}
       `}>
             <div className="header__container">
-                <NavLink to="/" className="header__logo" onClick={onLogoClick} />
+                <NavLink to="/" className="header__logo" />
                 {
                     !isСheckIn && pathOne === '/' ?
                         <nav className="header__options">
                             <NavLink to="/signup" className="header__option header__option_register"
-                                onClick={onRegisterClick}>Регистрация</NavLink>
+                            >Регистрация</NavLink>
                             <NavLink to="/signin" className="header__option header__option_login"
-                                onClick={onLoginClick}>Войти</NavLink>
+                            >Войти</NavLink>
                         </nav> :
                         <div className="header__navigation">
-                            <Navigation handleOnMainClick={handleOnMainClick} handleMoviesClick={handleMoviesClick}
-                                handleOnAccountClick={handleOnAccountClick} />
+                            <Navigation
+                                handleByClickButtonSaveMovies={handleByClickButtonSaveMovies}
+                                handleClickByMovies={handleClickByMovies} />
                         </div>
                 }
                 {isСheckIn && <button className="header__menu-button" type="button" onClick={handleMenuOpen} />}

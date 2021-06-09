@@ -1,11 +1,12 @@
 import Auth from '../Auth/Auth';
 import './Login.css';
 
-const Login = ({ onLogoClick, onLogin }) => {
+const Login = ({
+    isBlocked,
+    onLogin }) => {
     return (
         <section className="login">
             <Auth
-                onLogoClick={onLogoClick}
                 handleSubmit={onLogin}
                 captionText="Еще не зарегистированы?"
                 route="/signup"
@@ -13,6 +14,7 @@ const Login = ({ onLogoClick, onLogin }) => {
                 isNameVisible={false}
                 buttonText="Войти"
                 navLinkText="Регистрация"
+                isBlocked={isBlocked}
             />
         </section>
     );

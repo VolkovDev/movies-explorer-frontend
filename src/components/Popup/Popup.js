@@ -7,11 +7,15 @@ const Popup = ({ closePopup, isOpen, isFail }) => {
             <div className="popup__container">
                 <p className="popup__message">
                     {isFail ?
-                        'Ошибка' :
-                        'Действие выполнено успешно'
+                        'Произошла ошибка' :
+                        'Успешно выполнено'
                     }
                 </p>
-                <button className="popup__close" type="button" onClick={closePopup} />
+                <button
+                    className="popup__close"
+                    type="button"
+                    onClick={closePopup}
+                />
 
             </div>
         </section>
