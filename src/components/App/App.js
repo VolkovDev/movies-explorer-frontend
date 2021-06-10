@@ -40,7 +40,7 @@ function App() {
     const location = useLocation();
 
     const [currentUser, setCurrentUser] = useState({});
-    const [isСheckIn, setIsСheckIn] = useState(true);
+    const [isСheckIn, setIsСheckIn] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [isMainSheet, setIsMainSheet] = useState(false);
     const [popupMessage, setPopupMessage] = useState('');
@@ -134,7 +134,7 @@ function App() {
     useEffect(() => {
         const jwt = localStorage.getItem('jwt');
         if (isСheckIn) {
-            setIsСheckIn(true);
+            setIsLoading(true);
             Promise.all([
                 mainApi.getMovies(jwt),
                 mainApi.getUserInfo(jwt)
@@ -153,7 +153,7 @@ function App() {
             })
                 .catch((err) => console.log(err))
                 .finally(() => {
-                    setIsСheckIn(true);
+                    setIsLoading(false);
                 });
         }
 

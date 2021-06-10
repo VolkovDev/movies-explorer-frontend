@@ -17,7 +17,7 @@ const moviesListCard = ({
     return <>
         {isLoading && <Preloader />}
         <ul className={`movies-list-card 
-${!savedRequest && 'movies-cardlist_hidden'}`}>
+${!savedRequest && 'movies-list-card_hidden'}`}>
             {
                 isFound ? movieList.slice(0, renderSiseWindow).map((movie) => {
                     // console.log("movie", movie)
@@ -30,7 +30,7 @@ ${!savedRequest && 'movies-cardlist_hidden'}`}>
                         movie={movie}
                         image={movie.image}
                         deleteMovie={deleteMovie} />
-                }) : <li className="movies-cardlist__not-found-text">Ничего не найдено</li>
+                }) : <li className="movies-list-card__not-found">Ничего&nbsp;не&nbsp;найдено</li>
             }
         </ul>
     </>
