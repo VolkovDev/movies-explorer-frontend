@@ -1,29 +1,45 @@
 import './MoviesCard.css';
-import { useState } from 'react';
+import { useContext } from 'react';
 import { convertTime } from '../../utils/utils';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
-const MoviesCard = ({ image, name, duration, isSavePage }) => {
-    const [isClicked, setIsClicked] = useState(false);
+const MoviesCard = ({ movie, image, nameRU, duration, savePage, saveMovie, deleteMovie }) => {
 
-    const saveButton = (
-        `movies-card__button movies-card__button_like-off ${isClicked && 'movies-card__button_like-on'}`
-    );
+    const currentUser = useContext(CurrentUserContext);
+    const isSaved = ((movie.owner && movie.owner) === currentUser._id);
 
-    const handleSaveClick = () => {
-        setIsClicked(!isClicked);
+    const handleSaveButtonClick = () => {
+        if (isSaved) {
+            deleteMovie(movie._id, movie);
+        } else {
+            saveMovie(movie);
+        }
     }
+
+    const handleDeleteButtonClick = () => {
+        deleteMovie(movie._id, movie);
+    }
+
+    const handleOpenTrailer = () => {
+        return window.open(movie.trailer);
+    }
+
 
     return (
         <li className="movies-card">
 
-            <p className="movies-card__title">{name}</p>
+            <p className="movies-card__title">{nameRU}</p>
             {
-                isSavePage ?
-                    <button type="button" className="movies-card__button movies-card__button_remove" /> :
-                    <button type="button" className={saveButton} onClick={handleSaveClick} />
+                savePage ?
+                    <button type="button" className="movies-card__button movies-card__button_remove"
+                        onClick={handleDeleteButtonClick} /> :
+                    <button type="button"
+                        className={`movies-card__button movies-card__button_like-off ${isSaved && 'movies-card__button_like-on'}`}
+                        onClick={handleSaveButtonClick} />
             }
             <p className="movies-card__length">{convertTime(duration)}</p>
-            <img className="movies-card__image" src={image} alt={name} />
+            <div onClick={handleOpenTrailer}
+                className="movies-card__image" style={{ background: `center/cover url(${image}) no-repeat` }} />
         </li>
     );
 };

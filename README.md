@@ -1,4 +1,6 @@
-### Проект
-https://VolkovDev.github.io/movies-explorer-frontend/
+### Приложение для поиска фильмов 
+ ## [avolk.ru](https://avolk.ru/) — frontend
+
 ### Макет
-https://www.figma.com/file/rfF4EOxywXQZClGMSwHELU/?node-id=891%3A3857
+## [Макет Figma](https://www.figma.com/file/rfF4EOxywXQZClGMSwHELU/?node-id=891%3A3857)
+
